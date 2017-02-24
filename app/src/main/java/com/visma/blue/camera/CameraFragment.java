@@ -56,6 +56,9 @@ import net.sourceforge.zbar.SymbolSet;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.opencv.android.Utils;
+import org.opencv.core.CvType;
+import org.opencv.core.Mat;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -200,9 +203,23 @@ public class CameraFragment extends Fragment {
                             }
 
                             opts.inJustDecodeBounds = false;
+                            //Bitmap bitmap = BitmapFactory.decodeByteArray(data, 0, data.length,
+                            //        opts);
+
                             Bitmap bitmap = BitmapFactory.decodeByteArray(data, 0, data.length,
                                     opts);
+                            //todo: Test code trying to manipulate bitmap and see what happens.
+                            //update: Has nothing to do with anything.
+
+                            /*
+                            Mat mat = new Mat();
+                            Utils.bitmapToMat(bitmap, mat);
+                            Mat invertedMat = EdgeDetector.getEdges(mat);
+                            Utils.matToBitmap(invertedMat, bitmap);
                             data = null;
+                            */
+
+                            //todo: end of test code
 
                             if (VismaUtils.shouldRotateBitmap(bitmap)) {
                                 bitmap = VismaUtils.getResizedBitmap(bitmap, 1024, true);
@@ -270,14 +287,6 @@ public class CameraFragment extends Fragment {
                 startActivityForResult(intent, 10);
                 mDontPopBackstack = true; // Prevent the Fragment from being popped in onPause
 
-                /*
-                //todo start of test code
-                Parameters oldParameters = mCamera.getParameters();
-                Parameters newParameters = oldParameters;
-                newParameters.setPreviewFrameRate(2);
-                mCamera.setParameters(newParameters);
-                //todo end of test code
-                */
             }
         });
 
@@ -329,6 +338,9 @@ public class CameraFragment extends Fragment {
                 //todo: Change the comments from the first to the second statement after this one.
                 //int previewFrameRate = mCamera.getParameters().getPreviewFrameRate();
                 updateFlashButtonText(Long.toString(numberOfFrames));
+
+
+
                 //updateFlashButtonText(Integer.toString(previewFrameRate));
                 VismaUtils.setCurrentFlash(getActivity(), newFlashMode);
                 //mCamera.setParameters(oldParameters);
@@ -599,12 +611,17 @@ public class CameraFragment extends Fragment {
     PreviewCallback previewCb = new PreviewCallback() {
         public void onPreviewFrame(byte[] data, Camera camera) {
             //Todo: This is where test code starts.
+            //update: Removed because of app crash. Presumably because of UI thread blockage.
 
-            numberOfFrames += 1;
-
-
+            //Bitmap bitmap = BitmapFactory.decodeByteArray(data, 0, data.length);
+            //Mat mat = new Mat();
+            //Utils.bitmapToMat(bitmap, mat);
+            //mat.put(0, 0, data);
+            //System.out.println(EdgeDetector.getLines(mat));
 
             //Todo: This is where test code ends.
+
+
             if (mAppId != AppId.EACCOUNTING && mAppId != AppId.VISMA_ONLINE) {
                 return;
             }

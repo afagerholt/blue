@@ -21,6 +21,9 @@ import com.visma.blue.provider.BlueContentProvider;
 import com.visma.blue.provider.TempBitmaps;
 import com.visma.blue.qr.UsingQr;
 
+import org.opencv.android.Utils;
+import org.opencv.core.Mat;
+
 import java.util.Date;
 
 public class PreviewFragment extends Fragment {
@@ -68,6 +71,14 @@ public class PreviewFragment extends Fragment {
         opts.inScaled = false; // http://developer.android.com/guide/practices/screens_support
         // .html#scaling
         bitmap = BitmapFactory.decodeByteArray(bitmapData, 0, bitmapData.length, opts);
+
+        //todo: Test code trying to manipulate bitmap and see what happens.
+
+        Mat mat = new Mat();
+        Utils.bitmapToMat(bitmap, mat);
+        Mat invertedMat = EdgeDetector.getEdges(mat, 1);
+        Utils.matToBitmap(invertedMat, bitmap);
+
         if (bitmap != null) {
             imageViewPreview.setImageBitmap(bitmap);
         }

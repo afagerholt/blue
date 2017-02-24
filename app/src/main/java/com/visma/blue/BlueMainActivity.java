@@ -47,6 +47,8 @@ import com.visma.blue.provider.TempBitmaps;
 import com.visma.blue.settings.SettingsActivity;
 import com.visma.blue.settings.SettingsDownloadService;
 
+import org.opencv.android.OpenCVLoader;
+
 import java.util.Date;
 
 public class BlueMainActivity extends AppCompatActivity implements NetworkStateReceiver
@@ -79,6 +81,12 @@ public class BlueMainActivity extends AppCompatActivity implements NetworkStateR
 
         if (!VismaUtils.hasPdfFileSharing()) {
             disablePdfFileSharing();
+        }
+
+        if (!OpenCVLoader.initDebug()) {
+            Log.e(this.getClass().getSimpleName(), "  OpenCVLoader.initDebug(), not working.");
+        } else {
+            Log.d(this.getClass().getSimpleName(), "  OpenCVLoader.initDebug(), working.");
         }
     }
 
