@@ -23,6 +23,8 @@ import com.visma.blue.qr.UsingQr;
 
 import org.opencv.android.Utils;
 import org.opencv.core.Mat;
+import org.opencv.core.Size;
+import org.opencv.imgproc.Imgproc;
 
 import java.util.Date;
 
@@ -72,12 +74,30 @@ public class PreviewFragment extends Fragment {
         // .html#scaling
         bitmap = BitmapFactory.decodeByteArray(bitmapData, 0, bitmapData.length, opts);
 
-        //todo: Test code trying to manipulate bitmap and see what happens.
+        //Todo: Start of test code here.
 
+        /**
+         * Initializing original Mat
+         */
         Mat mat = new Mat();
+
+        /**
+         * Converting original Bitmap to Mat
+         */
+
         Utils.bitmapToMat(bitmap, mat);
-        Mat invertedMat = EdgeDetector.getEdges(mat, 1);
-        Utils.matToBitmap(invertedMat, bitmap);
+
+        /**
+         * Creating heavily downsized Mat for analysis, and conserving ratio
+         */
+
+        Mat resultMat = EdgeDetector.resizeAndDraw(mat);
+
+        /**
+         * Analysing miniMat and presenting the resulting Mat
+         */
+
+        Utils.matToBitmap(resultMat, bitmap);
 
         if (bitmap != null) {
             imageViewPreview.setImageBitmap(bitmap);
