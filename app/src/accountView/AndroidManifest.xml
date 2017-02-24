@@ -1,0 +1,32 @@
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          android:installLocation="auto">
+
+<application
+    android:name="com.visma.blue.accountview.BlueApplication"
+    android:allowBackup="true"
+    android:fullBackupContent="@xml/bluebackupscheme"
+    android:hardwareAccelerated="true"
+    android:icon="@drawable/ic_launcher"
+    android:label="@string/visma_blue_icon_title"
+    android:theme="@style/NordicCoolMaterialTheme"
+    tools:replace="fullBackupContent">
+    <activity
+        android:name="com.visma.blue.accountview.AccountViewInformationActivity"
+        android:label="@string/visma_blue_main_activity_title"
+        android:screenOrientation="portrait"
+        android:windowSoftInputMode="adjustResize">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN"/>
+
+            <category android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter>
+    </activity>
+
+    <meta-data
+        android:name="io.fabric.ApiKey"
+        android:value="${FabricApiKey}"/>
+</application>
+
+</manifest>

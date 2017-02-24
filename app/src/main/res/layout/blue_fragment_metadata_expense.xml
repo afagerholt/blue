@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.visma.blue.metadata.expense.MetadataViewModel" />
+
+        <variable
+            name="metadataViewModel"
+            type="com.visma.blue.metadata.expense.MetadataViewModel" />
+    </data>
+
+    <ScrollView
+        android:id="@+id/blue_fragment_metadata_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <requestFocus />
+            <!-- Use android:focusableInTouchMode="true" together with requestFocus
+            to prevent the EditText
+            from gaining focus and starting it's animation when the view is created -->
+
+            <RelativeLayout
+                android:id="@+id/fragment_metadata_layout_image"
+                android:layout_width="fill_parent"
+                android:layout_height="61dp"
+                android:background="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp">
+
+                <TextView
+                    android:id="@+id/fragment_metadata_image_filename_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/visma_blue_label_image"
+                    android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/fragment_metadata_image_filename"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fragment_metadata_image_filename_label"
+                    android:ellipsize="marquee"
+                    android:maxLines="1"
+                    android:text="@string/visma_blue_label_image"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/nc_divider" />
+
+            <com.visma.common.LabeledView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:enabled="@{metadataViewModel.expenseTypeEnabled}"
+                app:floatLabelHint="@string/visma_blue_metadata_expense_type"
+                app:floatLabelPaddingTop="16dp"
+                app:onClickListener="@{metadataViewModel.expenseTypeOnClickListener}"
+                app:floatLabelTextAppearance="@style/TextAppearance.FloatLabel"
+                app:updateExpenseTypeHeading="@{metadataViewModel.updateExpenseTypeHeading}">
+
+                <TextView
+                    android:id="@+id/blue_expense_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:duplicateParentState="true"
+                    android:text="@{metadataViewModel.expenseTypeName}"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="?android:attr/textColorPrimary"
+                    tools:text="2016-01-14"/>
+
+            </com.visma.common.LabeledView>
+
+            <com.visma.common.LabeledView
+                android:id="@+id/blue_fragment_metadata_layout_payment_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                app:floatLabelPaddingTop="16dp"
+                app:floatLabelTextAppearance="@style/TextAppearance.FloatLabel"
+                app:onClickListener="@{metadataViewModel.dateOnClickListener}"
+                app:enabled="@{metadataViewModel.enabled}">
+
+                <TextView
+                    android:id="@+id/blue_fragment_payment_date_data"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:hint="@string/visma_blue_label_date"
+                    android:maxLines="1"
+                    android:text="@{metadataViewModel.date}"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="?android:attr/textColorPrimary"
+                    tools:text="2016-01-14"
+                    app:enabled="@{metadataViewModel.enabled}" />
+            </com.visma.common.LabeledView>
+
+            <com.visma.common.FloatLabelLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:floatLabelPaddingTop="16dp"
+                app:floatLabelPaddingLeft="0dp"
+                app:floatLabelTextAppearance="@style/TextAppearance.FloatLabel">
+
+                <EditText
+                    android:id="@+id/activity_more_information_due_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:hint="@string/visma_blue_metadata_more_information_due_amount"
+                    android:imeOptions="actionNext"
+                    android:inputType="numberDecimal|numberSigned"
+                    android:maxLines="1"
+                    android:text="@{metadataViewModel.dueAmount}"
+                    app:addTextChangedListener="@{metadataViewModel.dueAmountWatcher}"
+                    app:keyListener="@{metadataViewModel.decimalKeyListener}"
+                    app:onFocusChangeListener="@{metadataViewModel.dueAmountOnFocusChangeListener}"
+                    app:enabled="@{metadataViewModel.enabled}"/>
+
+            </com.visma.common.FloatLabelLayout>
+
+            <com.visma.common.LabeledView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:enabled="@{metadataViewModel.expenseCurrencyEnabled}"
+                app:floatLabelHint="@string/visma_blue_metadata_more_information_currency_code"
+                app:floatLabelPaddingTop="16dp"
+                app:floatLabelTextAppearance="@style/TextAppearance.FloatLabel"
+                app:onClickListener="@{metadataViewModel.expenseCurrencyOnClickListener}"
+                app:updateExpenseCurrencyHeading="@{metadataViewModel.updateExpenseCurrencyHeading}">
+
+                <TextView
+                    android:id="@+id/blue_expense_currency"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:duplicateParentState="true"
+                    android:text="@{metadataViewModel.expenseCurrencyName}"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="?android:attr/textColorPrimary"
+                    tools:text="2016-01-14"
+                    />
+
+            </com.visma.common.LabeledView>
+
+            <com.visma.common.FloatLabelLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:floatLabelPaddingLeft="0dp"
+                app:floatLabelPaddingTop="16dp"
+                app:floatLabelTextAppearance="@style/TextAppearance.FloatLabel">
+
+                <EditText
+                    android:id="@+id/commentTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/visma_blue_hint_comment_expense"
+                    android:inputType="textMultiLine|textAutoCorrect|textCapSentences"
+                    android:maxLength="255"
+                    android:minHeight="61dp"
+                    android:text="@{metadataViewModel.comment}"
+                    app:addTextChangedListener="@{metadataViewModel.commentWatcher}"
+                    app:enabled="@{metadataViewModel.enabled}"/>
+
+            </com.visma.common.FloatLabelLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

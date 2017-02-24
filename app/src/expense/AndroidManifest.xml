@@ -1,0 +1,73 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:installLocation="auto">
+
+    <application
+        android:name="com.visma.blue.expense.BlueApplication"
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/bluebackupscheme"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/visma_blue_icon_title"
+        android:theme="@style/NordicCoolMaterialTheme"
+        tools:replace="fullBackupContent">
+        <activity
+            android:name="com.visma.blue.expense.BlueExpenseMainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/jpg" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/jpeg" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/png" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/gif" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/bmp" />
+            </intent-filter>
+        </activity>
+
+        <activity-alias
+            android:name="PdfFileComponent"
+            android:targetActivity=".BlueExpenseMainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/pdf"/>
+            </intent-filter>
+        </activity-alias>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="${FabricApiKey}" />
+
+        <provider
+            android:name="com.visma.blue.provider.BlueContentProvider"
+            android:authorities="com.visma.blue.expense.provider"
+            android:exported="false"
+            android:grantUriPermissions="false" />
+    </application>
+
+</manifest>

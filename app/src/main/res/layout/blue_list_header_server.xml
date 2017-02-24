@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="?android:attr/windowBackground">
+
+    <TextView
+        android:id="@+id/blue_row_sectioned_server_environment_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="@color/nc_blue"
+        tools:text="7 jan 2015" />
+
+    <LinearLayout
+        android:id="@+id/blue_row_sectioned_server_header_bottom_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/nc_blue"
+        android:orientation="vertical" />
+
+</RelativeLayout>

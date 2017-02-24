@@ -1,0 +1,135 @@
+<resources
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="NordicCoolMaterialTheme" parent="NordicCoolMaterialTheme.Base">
+    </style>
+
+    <style name="NordicCoolMaterialTheme.NoActionBar" parent="NordicCoolMaterialTheme">
+        <!-- Both of these are needed -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="NordicCoolMaterialTheme.NoActionBar.FullScreen" parent="NordicCoolMaterialTheme.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="NordicCoolMaterialTheme.NoActionBar.GradientBackground">
+        <item name="android:windowBackground">@drawable/nc_background_login</item>
+    </style>
+
+    <style name="NordicCoolMaterialTheme.Dark" parent="NordicCoolMaterialTheme.Base.Dark">
+        <!--
+        <item name="windowActionBarOverlay">true</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        -->
+    </style>
+
+    <style name="NordicCoolMaterialTheme.Dark.NoActionBar" parent="NordicCoolMaterialTheme.Dark">
+        <!-- Both of these are needed -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="NordicCoolMaterialTheme.Dark.NoActionBar.FullScreen" parent="NordicCoolMaterialTheme.Dark.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="NordicCoolMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- The color applied to framework control highlights (ex. ripples, list selectors) -->
+        <item name="colorControlHighlight">@color/nc_blue_pressed</item>
+
+        <!--
+        <item name="actionBarTabStyle">@style/ActionBarTabStyle.MyMaterialTheme</item>
+        -->
+
+        <!-- colorPrimary is used for the default action bar background -->
+        <item name="colorPrimary">@color/nc_blue_actionbar</item>
+
+        <!-- colorPrimaryDark is used for the status bar -->
+        <item name="colorPrimaryDark">@color/nc_navigation_drawer_pressed</item>
+
+        <!-- colorAccent is used as the default value for colorControlActivated,
+         which is used to tint widgets -->
+        <item name="colorAccent">@color/nc_blue</item>
+
+        <!-- You can also set colorControlNormal, colorControlActivated
+         colorControlHighlight, and colorSwitchThumbNormal. -->
+
+        <!-- Background for list items -->
+        <!-- At the moment we need both with and without the "android:" prefix, so that all controls work as expected -->
+        <item name="android:listChoiceBackgroundIndicator">@drawable/nc_list_selector_light</item>
+        <item name="listChoiceBackgroundIndicator">@drawable/nc_list_selector_light</item>
+        <item name="android:activatedBackgroundIndicator">@drawable/nc_activated_background</item>
+
+        <!-- Alert Dialogs -->
+        <item name="alertDialogTheme">@style/NordicCoolMaterialTheme.AlertDialog</item>
+        <item name="dialogTheme">@style/NordicCoolMaterialTheme.Dialog</item>
+
+        <!-- CircularProgressBar -->
+        <item name="cpbStyle">@style/NordicCoolCircularProgressBar</item>
+    </style>
+
+    <style name="NordicCoolMaterialTheme.Base.Dark" parent="Theme.AppCompat">
+        <!-- The color applied to framework control highlights (ex. ripples, list selectors) -->
+        <item name="colorControlHighlight">@color/buttonbar_dark_pressed_nc</item>
+
+        <!-- colorPrimary is used for the default action bar background -->
+        <item name="colorPrimary">@color/nc_blue_actionbar</item>
+
+        <!-- colorPrimaryDark is used for the status bar -->
+        <item name="colorPrimaryDark">@color/nc_navigation_drawer_pressed</item>
+
+        <!-- colorAccent is used as the default value for colorControlActivated,
+         which is used to tint widgets -->
+        <item name="colorAccent">@color/nc_blue</item>
+
+        <!-- You can also set colorControlNormal, colorControlActivated
+         colorControlHighlight, and colorSwitchThumbNormal. -->
+    </style>
+
+    <style name="NordicCoolMaterialTheme.AlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/nc_blue</item>
+    </style>
+
+    <style name="NordicCoolMaterialTheme.Dialog" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/nc_blue</item>
+    </style>
+
+    <style name="SwitchInActionBar" tools:ignore="UnusedResources">
+        <item name="colorSwitchThumbNormal">@color/nc_blue</item>
+        <item name="colorAccent">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="TextAppearance.FloatLabel" parent="android:TextAppearance.Small">
+        <item name="android:textColor">@color/nc_blue</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextAppearance.FloatLabel.Disabled" parent="android:TextAppearance.Small">
+        <item name="android:textColor">@color/nc_grey_light</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="NordicCoolCircularProgressBar" parent="android:Widget.Holo.ProgressBar">
+        <item name="cpb_color">@color/nc_blue</item>
+        <item name="cpb_stroke_width">@dimen/cpb_default_stroke_width</item>
+        <item name="cpb_min_sweep_angle">@integer/cpb_default_min_sweep_angle</item>
+        <item name="cpb_max_sweep_angle">@integer/cpb_default_max_sweep_angle</item>
+        <item name="cpb_sweep_speed">@string/cpb_default_sweep_speed</item>
+        <item name="cpb_rotation_speed">@string/cpb_default_rotation_speed</item>
+
+        <!--
+        <item name="android:background">@drawable/nc_progressbar_background</item>
+        -->
+        <item name="android:padding">8dp</item>
+    </style>
+
+    <style name="NordicCool.Button.Green" parent="@style/Widget.AppCompat.Button">
+        <item name="android:background">@drawable/nc_button_green</item>
+        <item name="android:textColor">#ffffff</item>
+    </style>
+
+</resources>

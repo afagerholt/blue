@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="visma_blue_app_name">"Scanner"</string>
+    <string name="visma_blue_label_transferinfo1">"U kunt uw foto's direct naar een administratief programma verzenden."</string>
+    <string name="visma_blue_label_transferinfo2">"Als u geen software met een integratie met Mamut Mobile Scanner hebt, kunt u uw foto's per e-mail verzenden."</string>
+    <string name="visma_blue_label_photo_is_a_copy">"De foto is een kopie. Bewaar altijd de originele kassabon/factuur."</string>
+    <string name="visma_blue_email_subject">"E-mail van Mamut Mobile Scanner"</string>
+    <string name="visma_blue_email_text">"De foto is een bijlage. Verzonden van Mamut Mobile Scanner."</string>
+    <string name="visma_blue_label_info1">"Met Mamut Mobile Scanner kunt u uw foto’s direct naar uw administratief programma verzenden."</string>
+    <string name="visma_blue_activity_title_archive">"Mamut Scanner"</string>
+    <string name="visma_blue_login_tutorial_page_1_title">"Mamut Mobile Scanner"</string>
+</resources>

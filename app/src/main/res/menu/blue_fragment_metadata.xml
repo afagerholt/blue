@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/blue_fragment_metadata_menu_send"
+        android:icon="@drawable/nc_ic_action_send_now"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom"
+        android:title="@string/visma_blue_button_send">
+    </item>
+    <item
+        android:id="@+id/blue_fragment_metadata_menu_discard"
+        android:icon="@drawable/nc_ic_action_discard"
+        android:orderInCategory="2"
+        app:showAsAction="never"
+        android:title="@string/visma_blue_button_remove">
+    </item>
+    <item
+        android:id="@+id/blue_fragment_metadata_menu_qr_code"
+        android:icon="@drawable/blue_ic_action_qrcode"
+        android:orderInCategory="3"
+        app:showAsAction="ifRoom"
+        android:title="@string/visma_blue_button_read_from_qr">
+    </item>
+
+</menu>

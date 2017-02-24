@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.visma.blue.metadata.expense.ExpenseTypeModelView"/>
+
+        <variable
+            name="expenseViewModel"
+            type="com.visma.blue.metadata.expense.ExpenseTypeModelView"/>
+    </data>
+
+    <com.visma.common.VismaLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/listViewExpenseType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:adapter="@{expenseViewModel.expenseTypeAdapter}"
+            app:onItemClickListener="@{expenseViewModel.expenseTypeItemClickListener}"/>
+
+    </com.visma.common.VismaLinearLayout>
+
+</layout>

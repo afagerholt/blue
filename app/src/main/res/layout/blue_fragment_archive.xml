@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.visma.common.VismaLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/refreshableListViewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/blue_fragment_archive_swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <se.emilsjolander.stickylistheaders.StickyListHeadersListView
+                android:id="@android:id/list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:fastScrollEnabled="true"
+                android:paddingBottom="8dp"
+                tools:listitem="@layout/blue_list_item_metadata"/>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <RelativeLayout
+            android:id="@android:id/empty"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawableTop="@drawable/blue_ic_empty_state_archive"
+                android:text="@string/visma_blue_empty_list"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:textColor="@color/nc_grey_medium"/>
+
+            <com.visma.common.ArchitectsDaughterTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="55dp"
+                android:layout_marginTop="55dp"
+                android:drawablePadding="5dp"
+                android:drawableTop="@drawable/nc_ic_arrow_up_right"
+                android:text="@string/visma_blue_empty_list_create_new_document"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:textColor="@color/nc_blue"
+                tools:ignore="RelativeOverlap"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</com.visma.common.VismaLinearLayout>

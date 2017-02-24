@@ -1,0 +1,8 @@
+<resources>    
+    <string-array name="visma_blue_service_servers" translatable="false">
+		<item>"Stage"</item>
+		<item>"internaltest"</item>
+       	<item>"test"</item>
+       	<item>"Live"</item>
+    </string-array>
+</resources>    

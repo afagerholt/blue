@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="visma_blue_icon_title">"Attach"</string>
+    <string name="visma_blue_main_activity_title">"Visma Attach"</string>
+    <string name="visma_blue_email_subject">"E-mail from Visma Attach"</string>
+    <string name="visma_blue_email_text">"Image as an attachment. Sent from Visma Attach"</string>
+    <string name="visma_blue_label_photo_is_connected">"Your picture is connected to Visma.net Expense and therefore cannot be changed."</string>
+    <string name="visma_blue_label_info2">"Please note that pictures not connected to Visma.net Expense, will be deleted from the archive after 6 months. The user of the service is responsible to ensure that pictures sent using the service do not violate the law or good ethics."</string>
+    <string name="visma_blue_login_tutorial_page_1_text">"Send pictures of your receipts directly from your mobile to Visma.net Expense"</string>
+    <string name="visma_blue_login_tutorial_page_1_title">"Visma Attach"</string>
+    <string name="visma_blue_login_tutorial_page_2_text">"Take a picture of your receipt, add more information if required and press send."</string>
+    <string name="visma_blue_login_tutorial_page_3_text">"Now your picture has been sent to Visma.net Expense and will be available for your expense."</string>
+</resources>

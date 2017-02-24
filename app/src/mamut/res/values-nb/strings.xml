@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="visma_blue_app_name">"Scanner"</string>
+    <string name="visma_blue_label_transferinfo1">"Du kan sende dine bilder direkte til Mamut Business Software."</string>
+    <string name="visma_blue_label_transferinfo2">"Om du har et annen økonomiprogram kan du sende dine bilder på e-post."</string>
+    <string name="visma_blue_label_photo_is_a_copy">"Bildet er en kopi. Lagre alltid kvittering/faktura som original."</string>
+    <string name="visma_blue_email_subject">"E-post fra Mamut Mobile Scanner"</string>
+    <string name="visma_blue_email_text">"Bilde som vedlagt fil. Sendt fra Mamut Mobile Scanner"</string>
+    <string name="visma_blue_label_info1">"Med Mamut Mobile Scanner kan du sende dine bilder direkte til ditt økonomiprogram."</string>
+    <string name="visma_blue_activity_title_archive">"Mamut Scanner"</string>
+    <string name="visma_blue_login_tutorial_page_1_title">"Mamut Mobile Scanner"</string>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        tools:ignore="UselessParent"
+        android:layout_width="wrap_content"
+        android:layout_height="400dp"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/blue_fragment_tutorial_image"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:contentDescription="@null"
+            android:gravity="center_horizontal"
+            android:scaleType="center"
+            tools:src="@drawable/blue_login_tutorial_step1"/>
+
+        <TextView
+            android:id="@+id/blue_fragment_tutorial_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:fontFamily="sans-serif-light"
+            android:gravity="center"
+            android:lines="2"
+            android:text="@string/visma_blue_icon_title"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="34sp"
+            tools:ignore="UnusedAttribute"/>
+
+        <TextView
+            android:id="@+id/blue_fragment_tutorial_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="@string/visma_blue_login_tutorial_page_2_text"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+    </LinearLayout>
+
+</RelativeLayout>

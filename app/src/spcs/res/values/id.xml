@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="com_visma_app_flurry_id_live" translatable="false">FRFG7N2ZP73TZM2NTR48</string>
+    <string name="com_visma_app_flurry_id_test" translatable="false">23D336NMK5YF69SCBWZS</string>
+</resources>

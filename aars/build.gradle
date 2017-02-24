@@ -1,0 +1,12 @@
+configurations.create("default")
+artifacts.add("default", file('visma-common-2.0.1.aar'))
+
+/**
+ * Workarount for Running Robolectric tests.
+ * http://stackoverflow.com/questions/33132996/android-skip-gradle-testclasses-task-for-a-dependency-project
+ */
+task testClasses {
+    doLast {
+        println 'This is a workaround for running Robolectric tests'
+    }
+}

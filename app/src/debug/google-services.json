@@ -1,0 +1,117 @@
+{
+  "project_info": {
+    "project_number": "875021527145",
+    "firebase_url": "https://i-destiny-558.firebaseio.com",
+    "project_id": "i-destiny-558",
+    "storage_bucket": "i-destiny-558.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:875021527145:android:ffce676ada02dd7d",
+        "android_client_info": {
+          "package_name": "com.visma.blue"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "875021527145-uo9canu8isu8td002q6c8f8qp88um0bk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.visma.blue",
+            "certificate_hash": "E8D6514818B899570B1698A0D7B3C11A204BEBC5"
+          }
+        },
+        {
+          "client_id": "875021527145-hqdil6nmoefbp3lelmorjg41qr8o8udg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuJBvHznVhIsnGpeXGrEKrQRkCQz7RtvQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "875021527145-hqdil6nmoefbp3lelmorjg41qr8o8udg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "875021527145-ao28htgiubfvbunea51tr104u18k8i4g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "se.vismaspcs.TestApplication"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:875021527145:android:439c4b9b47b61661",
+        "android_client_info": {
+          "package_name": "com.visma.blue.expense"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "875021527145-hqdil6nmoefbp3lelmorjg41qr8o8udg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAuJBvHznVhIsnGpeXGrEKrQRkCQz7RtvQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "android_client_info": {
+          "package_name": "com.visma.blue.accountview"
+        }
+      },
+      "api_key": [
+        {
+          "current_key": ""
+        }
+      ]
+    },
+    {
+      "client_info": {
+        "android_client_info": {
+          "package_name": "com.visma.blue.mamut"
+        }
+      },
+      "api_key": [
+        {
+          "current_key": ""
+        }
+      ]
+    }
+  ],
+  "configuration_version": "1"
+}

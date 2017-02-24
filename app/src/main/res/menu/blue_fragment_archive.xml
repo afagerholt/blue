@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/blue_fragment_menu_add"
+        android:icon="@drawable/nc_ic_action_camera"
+        android:orderInCategory="1"
+        android:title="@string/visma_blue_menu_add"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/blue_fragment_menu_search"
+        android:icon="@drawable/nc_ic_action_search"
+        android:orderInCategory="2"
+        android:title="@string/visma_blue_menu_search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+</menu>

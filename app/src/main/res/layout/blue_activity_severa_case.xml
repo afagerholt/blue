@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.visma.blue.metadata.severa.SeveraCaseModelView"/>
+
+        <variable
+            name="caseViewModel"
+            type="com.visma.blue.metadata.severa.SeveraCaseModelView"/>
+    </data>
+
+    <com.visma.common.VismaLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/listViewSeveraCase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@null"
+            app:adapter="@{caseViewModel.severaCaseAdapter}"
+            app:onItemClickListener="@{caseViewModel.severaCaseItemClickListener}"/>
+
+    </com.visma.common.VismaLinearLayout>
+
+</layout>

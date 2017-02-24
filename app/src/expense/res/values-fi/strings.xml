@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="visma_blue_icon_title">"Attach"</string>
+    <string name="visma_blue_main_activity_title">"Visma Attach"</string>
+    <string name="visma_blue_email_subject">"Sähköposti sovelluksesta Visma Attach"</string>
+    <string name="visma_blue_email_text">"Kuva liitteenä. Lähetetty Visma Attach:sta"</string>
+    <string name="visma_blue_label_photo_is_connected">"Kuvasi on liitetty ohjelmiston tapahtumaan ja sitä ei voida enää muuttaa."</string>
+    <string name="visma_blue_label_info2">"Huomioithan, että kuvat joita ei ole liitetty mihinkään ohjelmistoon, poistetaan kuuden kk:n jälkeen. Palvelun käyttäjä on vastuussa siitä, että kuvat, joita palvelun kautta lähetetään eivät riko lakia tai hyviä tapoja."</string>
+    <string name="visma_blue_login_tutorial_page_1_text">"Lähetä kuvat kuiteistasi Visma.net Expenseen suoraan matkapuhelimestasi."</string>
+    <string name="visma_blue_login_tutorial_page_1_title">"Visma Attach"</string>
+    <string name="visma_blue_login_tutorial_page_2_text">"Ota kuva kuitistasi, lisää tietoja jos tarvetta ja lähetä."</string>
+    <string name="visma_blue_login_tutorial_page_3_text">"Nyt kuvasi on lähetetty Visma.net Expenseen ja valittavissa kulukirjauksellesi."</string>
+</resources>

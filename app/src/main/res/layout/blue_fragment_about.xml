@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.visma.blue.about.AboutViewModel" />
+
+        <variable
+            name="aboutViewModel"
+            type="com.visma.blue.about.AboutViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="8dp">
+
+        <com.visma.common.LabeledView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            app:floatLabelPaddingTop="16dp"
+            app:floatLabelTextAppearance="@style/TextAppearance.FloatLabel"
+            app:visibility="@{aboutViewModel.companyVisibility}">
+
+            <TextView
+                android:id="@+id/blue_fragment_about_layout_logged_in_as_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:hint="@string/visma_blue_about_logged_in_as"
+                android:singleLine="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:text="@{aboutViewModel.company}"
+                tools:text="My Company Name" />
+        </com.visma.common.LabeledView>
+
+        <com.visma.common.LabeledView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            app:floatLabelPaddingTop="16dp"
+            app:floatLabelTextAppearance="@style/TextAppearance.FloatLabel">
+
+            <TextView
+                android:id="@+id/blue_fragment_about_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:hint="@string/visma_blue_about_version"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                android:text="@{aboutViewModel.version}"
+                tools:text="2.3.1" />
+        </com.visma.common.LabeledView>
+
+
+        <TextView
+            android:id="@+id/blue_fragment_about_layout_licenses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:gravity="center_vertical"
+            android:minHeight="61dp"
+            android:text="@string/visma_blue_about_licenses"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:onClickListener="@{aboutViewModel.licensesOnClickListener}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:gravity="center|bottom"
+            android:text="@string/visma_blue_label_info2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    </LinearLayout>
+</layout>

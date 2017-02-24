@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="visma_blue_app_name">"AV Scanner"</string>
+    <string name="visma_blue_label_transferinfo1">"U kunt uw foto's direct naar AccountView sturen."</string>
+    <string name="visma_blue_label_transferinfo2">"Hebt u geen AccountView? Verzend uw foto's dan per e-mail."</string>
+    <string name="visma_blue_label_photo_is_a_copy">"De foto is een kopie. Bewaar altijd de originele kassabon/factuur."</string>
+    <string name="visma_blue_email_subject">"E-mail van AccountView Mobile Scanner"</string>
+    <string name="visma_blue_email_text">"Foto in bijlage. Verzonden met AccountView Mobile Scanner."</string>
+    <string name="visma_blue_label_info1">"Met AccountView Mobile Scanner stuurt u foto's van kassabonnen en facturen rechtstreeks naar AccountView."</string>
+    <string name="visma_blue_login_tutorial_page_1_title">"Mobile Scanner"</string>
+    <string name="visma_blue_activity_title_archive">"Mobile Scanner"</string>
+
+</resources>

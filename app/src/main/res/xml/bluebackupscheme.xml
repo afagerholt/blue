@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- http://developer.android.com/training/backup/autosyncapi.html -->
+<full-backup-content>
+    <!-- GCM registration tokens should not be backed up. But, as we re-register every time the app
+    is opened this is not a problem for us. -->
+
+    <!-- Excluded background job library data from backup. More info:
+    https://github.com/evernote/android-job  -->
+    <exclude domain="sharedpref" path="evernote_jobs.xml" />
+    <exclude domain="database" path="evernote_jobs.db" />
+</full-backup-content>

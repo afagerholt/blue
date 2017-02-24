@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Server list -->
+    <string name="visma_blue_dev_server_list_window_header">"Choose environment"</string>
+    <string name="visma_blue_dev_server_list_header_test">"Test environments"</string>
+    <string name="visma_blue_dev_server_list_header_dev">"Developer environments"</string>
+    <string name="visma_blue_dev_server_list_header_live">"Live environments"</string>
+    <string name="visma_blue_dev_server_list_menu_refresh">"Refresh server list"</string>
+
+</resources>

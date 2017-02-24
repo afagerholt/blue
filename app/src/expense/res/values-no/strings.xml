@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="visma_blue_icon_title">"Attach"</string>
+    <string name="visma_blue_main_activity_title">"Visma Attach"</string>
+    <string name="visma_blue_email_subject">"E-post fra Visma Attach"</string>
+    <string name="visma_blue_email_text">"Bilde som vedlegg. Sendt fra Visma Attach."</string>
+    <string name="visma_blue_label_photo_is_connected">"Ditt bilde er koblet til Visma.net Expense og du kan derfor ikke gjøre noen endringer."</string>
+    <string name="visma_blue_label_info2">"Merk at bilder som ikke er koblet til Visma.net Expense slettes etter 6 måneder. Brukere av tjenesten er ansvarlig for at bilder som sendes via tjenesten ikke bryter med norsk lov eller god etikk."</string>
+    <string name="visma_blue_login_tutorial_page_1_text">"Send bilder av dine kvitteringer direkte fra din mobil til Visma.net Expense"</string>
+    <string name="visma_blue_login_tutorial_page_1_title">"Visma Attach"</string>
+    <string name="visma_blue_login_tutorial_page_2_text">"Ta et bilde av kvittering, komplett med detaljer og trykk send."</string>
+    <string name="visma_blue_login_tutorial_page_3_text">"Nå finnes bildet i Visma.net Expense"</string>
+</resources>

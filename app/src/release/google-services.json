@@ -1,0 +1,97 @@
+{
+  "project_info": {
+    "project_number": "728047157803",
+    "firebase_url": "https://api-project-728047157803.firebaseio.com",
+    "project_id": "api-project-728047157803",
+    "storage_bucket": "api-project-728047157803.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728047157803:android:ffce676ada02dd7d",
+        "android_client_info": {
+          "package_name": "com.visma.blue"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "728047157803-27usvldpbdi1q1mk1bhbffu8dr4rjmra.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2TOGszN7XoFjaofjRWyd66nYZsV_YK0w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728047157803:android:439c4b9b47b61661",
+        "android_client_info": {
+          "package_name": "com.visma.blue.expense"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "728047157803-27usvldpbdi1q1mk1bhbffu8dr4rjmra.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2TOGszN7XoFjaofjRWyd66nYZsV_YK0w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "android_client_info": {
+          "package_name": "com.visma.blue.accountview"
+        }
+      },
+      "api_key": [
+        {
+          "current_key": ""
+        }
+      ]
+    },
+    {
+      "client_info": {
+        "android_client_info": {
+          "package_name": "com.visma.blue.mamut"
+        }
+      },
+      "api_key": [
+        {
+          "current_key": ""
+        }
+      ]
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="UnusedResources">
+
+    <!--
+	<color name="nc_blue_pressed">#e1f1fa</color>
+	this color was replaced with the one below to be able to paint it on the foreground.
+	-->
+    <color name="nc_blue_pressed">#1e0690df</color>
+	<color name="nc_blue">#0089d9</color>
+	<color name="nc_blue_actionbar">#106a9e</color>
+	<color name="nc_grey_very_very_light">#fafafa</color>	
+	<color name="nc_grey_very_light">#f0f0f0</color>
+	<color name="nc_grey_light">#d2d2d2</color>
+	<color name="nc_grey_medium_light">#b2b2b2</color>
+	<color name="nc_grey_medium">#969696</color>
+	<color name="nc_grey_dark">#282828</color>	
+	<color name="nc_orange">#fa8919</color>
+	<color name="nc_red">#d91636</color>
+	<color name="nc_green">#84b158</color>
+	<color name="nc_actionbar_pressed">#1380bf</color>	
+	<color name="nc_navigation_drawer">@color/nc_blue_actionbar</color>
+	<color name="nc_navigation_drawer_pressed">#0c527a</color>
+	<color name="nc_navigation_drawer_divider">#0e5f8e</color>
+	
+	
+	<color name="nc_divider">@color/nc_grey_light</color>
+	<color name="nc_background">@color/nc_grey_very_light</color>
+	<color name="nc_background_lighter">@color/nc_grey_very_very_light</color>
+	
+	<!-- For texts -->
+    <color name="background_nc_dark">@color/nc_grey_dark</color>
+    <color name="background_nc_light">@color/nc_background</color>	
+    <color name="bright_foreground_nc_dark">@color/nc_background</color>
+    <color name="bright_foreground_nc_light">@color/nc_grey_dark</color>
+    <color name="bright_foreground_disabled_nc_dark">#ff4c4c4c</color>    
+    <color name="bright_foreground_disabled_nc_light">@color/nc_grey_medium_light</color>     
+    <color name="bright_foreground_inverse_nc_dark">@color/bright_foreground_nc_light</color>
+    <color name="bright_foreground_inverse_nc_light">@color/bright_foreground_nc_dark</color>
+    <color name="dim_foreground_nc_dark">#bebebe</color>
+    <color name="dim_foreground_disabled_nc_dark">#80bebebe</color>
+    <color name="dim_foreground_inverse_nc_dark">@color/nc_grey_medium</color>
+    <color name="dim_foreground_inverse_disabled_nc_dark">#80969696</color> <!-- nc_grey_medium with 80 alpha -->
+    <color name="hint_foreground_nc_dark">@color/nc_grey_medium_light</color>
+    <color name="dim_foreground_nc_light">@color/nc_grey_medium</color>
+    <color name="dim_foreground_disabled_nc_light">#80969696</color> <!-- nc_grey_medium with 80 alpha -->
+    <color name="dim_foreground_inverse_nc_light">#bebebe</color>
+    <color name="dim_foreground_inverse_disabled_nc_light">#80bebebe</color>
+    <color name="hint_foreground_nc_light">@color/nc_grey_medium_light</color>
+    <color name="highlighted_text_nc_dark">#660089d9</color> <!-- nc_blue with 66 alpha -->
+    <color name="highlighted_text_nc_light">#660089d9</color> <!-- nc_blue with 66 alpha -->
+    
+    <color name="buttonbar_dark_pressed_nc">#222222</color>
+
+    <!-- Nordic Cool button -->
+    <color name="nc_green_button_normal">#4d8400</color>
+    <color name="nc_green_button_pressed">#3b6600</color>
+    <color name="nc_green_button_disabled">#95b26b</color>
+</resources>

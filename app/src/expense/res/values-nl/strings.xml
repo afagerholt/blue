@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="visma_blue_icon_title">"Attach"</string>
+    <string name="visma_blue_main_activity_title">"Visma Attach"</string>
+    <string name="visma_blue_email_subject">"E-mail van Visma Attach"</string>
+    <string name="visma_blue_email_text">"De foto is een bijlage. Verzonden van Visma Attach"</string>
+    <string name="visma_blue_label_photo_is_connected">"Uw foto is gekoppeld aan Visma.net Expense en kan daarom niet worden aangepast."</string>
+    <string name="visma_blue_label_info2">"Houd er rekening mee dat foto's die niet gekoppeld Visma zijn na 6 maanden uit het archief worden verwijderd. De gebruiker van de service is verantwoordelijk voor de foto's en dat deze niet in strijd zijn met de wet en goede ethiek."</string>
+    <string name="visma_blue_login_tutorial_page_1_text">"Stuurt je documenten digitaal op naar Visma.net Expense"</string>
+    <string name="visma_blue_login_tutorial_page_1_title">"Visma Attach"</string>
+    <string name="visma_blue_login_tutorial_page_2_text">"Maak een foto van de bon en voeg informatie toe."</string>
+    <string name="visma_blue_login_tutorial_page_3_text">"De foto verschijnt in Visma.net Expense."</string>
+</resources>

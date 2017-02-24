@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="visma_blue_button_send">"Senden"</string>
+    <string name="visma_blue_button_abort">"Abbrechen"</string>
+    <string name="visma_blue_invoice">"Rechnung"</string>
+    <string name="visma_blue_receipt">"Beleg"</string>
+    <string name="visma_blue_button_demo">"Die App ausprobieren"</string>
+    <string name="visma_blue_button_remove">"Löschen"</string>
+    <string name="visma_blue_button_login">"Anmelden"</string>
+    <string name="visma_blue_menu_logout">"Abmelden"</string>
+    <string name="visma_blue_icon_title">"Scanner"</string>
+    <string name="visma_blue_hint_password">"Passwort"</string>
+    <string name="visma_blue_hint_email">"E-Mail-Adresse"</string>
+    <string name="visma_blue_button_use">"Verwenden"</string>
+    <string name="visma_blue_metadata_more_information">"Mehr Information"</string>
+    <string name="visma_blue_metadata_more_information_name">"Name"</string>
+    <string name="visma_blue_metadata_more_information_due_amount">"Summe"</string>
+    <string name="visma_blue_label_image">"Foto ansehen"</string>
+    <string name="visma_blue_label_date">"Datum"</string>
+    <string name="visma_blue_label_type">"Typ"</string>
+    <string name="visma_blue_label_photo_is_a_copy">"Das Bild ist eine Kopie. Immer das Originaldokument aufbewahren."</string>
+    <string name="visma_blue_label_photo_is_connected">"Ihr Bild ist benutzt und Sie können daher keine Änderungen machen."</string>
+    <string name="visma_blue_menu_about">"Über"</string>
+    <string name="visma_blue_label_info2">"Bitte beachten Sie, dass Bilder die innerhalb 6 Monate nicht verwendet werden, gelöscht werden. Benutzer vom Dienst sind dafür verantwortlich, dass Bilder, die durch den Dienst gesendet werden, nicht gegen ein gesetzliches Verbot oder gegen die guten Sitten verstoßen."</string>
+    <string name="visma_blue_label_type_receipt">"Beleg"</string>
+    <string name="visma_blue_label_type_invoice">"Rechnung"</string>
+    <string name="visma_blue_email_subject">"E-Mail von Visma Scanner"</string>
+    <string name="visma_blue_email_text">"Bild als Anhang. Von Visma Scanner gesendet."</string>
+    <string name="visma_blue_label_comment">"Kommentar"</string>
+    <string name="visma_blue_error_unknown_error">"Bitte versuchen Sie später."</string>
+    <string name="visma_blue_error_invalid_user_or_password">"Sie haben ein falsches Passwort oder eine falsche E-Mail-Adresse eingegeben."</string>
+    <string name="visma_blue_error_no_access_to_application">"Sie habe keinen Zugang zum Dienst."</string>
+    <string name="visma_blue_error_no_access_to_application_when_sending">"Sie haben keinen Zugang zum Dienst Visma Scanner und können daher nicht das Bild an die ERP-Software senden. Ihr Bild wird in der App gespeichert."</string>
+    <string name="visma_blue_error_license_agreement_not_accepted">"Um Zugang zum Dienst zu bekommen müssen Sie zuerst die Vereinbarung für Visma Spcs Websiten genehmigen."</string>
+    <string name="visma_blue_error_invalid_photo">"Das Bild fehlt."</string>
+    <string name="visma_blue_error_invalid_state">"Die Daten können nicht geändert werden."</string>
+    <string name="visma_blue_error_invalid_token">"Temporärer Fehler. Bitte versuchen Sie sich ab- und wieder anzumelden."</string>
+    <string name="visma_blue_error_blocked_company">"Ihr Konto ist gesperrt. Bitte kontaktieren Sie Visma Spcs."</string>
+    <string name="visma_blue_error_blocked_company_when_sending">"Ihr Konto ist gesperrt. Bitte kontaktieren Sie Visma Spcs. Ihr Bild ist in der App gespeichert."</string>
+    <string name="visma_blue_error_user_is_locked">"Ihr Konto ist gesperrt, bitte fordern Sie ein neues Passwort an."</string>
+    <string name="visma_blue_error_empty_password">"Bitte geben Sie Ihr Passwort ein."</string>
+    <string name="visma_blue_error_empty_username">"Sie müssen eine E-Mail-Adresse eingeben."</string>
+    <string name="visma_blue_error_connection_time_out">"Die Verbindung mit dem Dienst kann nicht hergestellt werden."</string>
+    <string name="visma_blue_error_unknown_error_when_sending">"Ein Fehler ist eingetroffen. Ihr Bild ist gespeichert und kann an einem späteren Zeitpunkt gesendet werden."</string>
+    <string name="visma_blue_label_not_synced_images">"Unsynchronisierte Bilder"</string>
+    <string name="visma_blue_hint_comment">"Kommentar"</string>
+    <string name="visma_blue_flash_on">"An"</string>
+    <string name="visma_blue_flash_off">"Aus"</string>
+    <string name="visma_blue_flash_auto">"Auto"</string>
+    <string name="visma_blue_about_licenses">"Lizenzen Dritter"</string>
+    <string name="visma_blue_toast_unsupported_image_format">"Nicht unterstütztes Bildformat"</string>
+    <string name="visma_blue_typepicker_title">"Typ"</string>
+    <string name="visma_blue_document">"Dokument"</string>
+    <string name="visma_blue_button_read_from_qr">"QR-Code einlesen"</string>
+    <string name="visma_blue_metadata_more_information_total_vat_amount">"USt."</string>
+    <string name="visma_blue_metadata_more_information_currency_code">"Währung"</string>
+    <string name="visma_blue_metadata_more_information_invoice_date">"Rechnungsdatum"</string>
+    <string name="visma_blue_metadata_more_information_due_date">"Verfallsdatum"</string>
+    <string name="visma_blue_metadata_more_information_reference_number">"Referenznummer"</string>
+    <string name="visma_blue_metadata_more_information_organisation_number">"Geschäftskennung"</string>
+    <string name="visma_blue_metadata_more_information_high_vat_amount">"Hohe USt."</string>
+    <string name="visma_blue_metadata_more_information_middle_vat_amount">"Mittlere USt."</string>
+    <string name="visma_blue_metadata_more_information_low_vat_amount">"Tiefe USt."</string>
+    <string name="visma_blue_label_payed">"Gezahlt"</string>
+    <string name="visma_blue_label_payment_date">"Zahlungsdatum"</string>
+    <string name="visma_blue_menu_search">"Suche"</string>
+    <string name="visma_blue_error_no_companies">"Keine Unternehmen sind mit dem Benutzer verbunden."</string>
+    <string name="visma_blue_menu_add">"Neu"</string>
+    <string name="visma_blue_empty_list_create_new_document">"Foto machen"</string>
+    <string name="visma_blue_empty_list">"Es gibt keine Unterlagen"</string>
+    <string name="visma_blue_toast_read_from_qr">"QR-Information gescannt"</string>
+    <string name="visma_blue_about_version">"Version"</string>
+    <string name="visma_blue_login_tutorial_page_2_title">"Fotografieren"</string>
+    <string name="visma_blue_login_tutorial_page_3_title">"Das Bild hinzufügen"</string>
+    <string name="visma_blue_login_tutorial_page_1_text">"Bilder direkt vom Handy an Ihre Visma-Software senden."</string>
+    <string name="visma_blue_login_tutorial_page_2_text">"Machen Sie ein Foto, ergänzen Sie mit weiteren Informationen und senden Sie das Bild."</string>
+    <string name="visma_blue_login_tutorial_page_3_text">"Jetzt ist Ihr Bild an Ihre Visma-Software gesendet."</string>
+    <string name="visma_blue_login_choose_company">"Unternehmen wählen"</string>
+    <string name="visma_blue_login_tutorial_page_1_title">"Visma Scanner"</string>
+    <string name="visma_blue_preference_category_send">"Senden"</string>
+    <string name="visma_blue_preference_default_email_address_title">"Standard E-Mail-Adresse"</string>
+    <string name="visma_blue_preference_default_email_address_summary">"Standard-E-Mail-Adresse für Empfang von Bildern."</string>
+    <string name="visma_blue_menu_settings">"Einstellungen"</string>
+    <string name="visma_blue_no_supporting_app_installed">"Um den Inhalt dieser Datei anzuzeigen, müssen Sie eine externe App installieren."</string>
+    <string name="visma_blue_about_generate_inbound_email">"Eingehende E-Mail-Adresse"</string>
+    <string name="visma_blue_email_dialog_title">"Eingehende E-Mail-Adresse"</string>
+    <string name="visma_blue_document_type_unknown">"Nicht klassifiziert"</string>
+    <string name="visma_blue_not_verified_document">"Dieses Dokument ist zum Dienst hochgeladen. Sie müssen Dokument-Typ wählen und das Dokument speichern um es zu behalten. Möchten Sie dieses Dokument nicht behalten, können Sie es löschen."</string>
+    <string name="visma_blue_notification_content_text">"Neue Dokumente zu genehmigen"</string>
+    <string name="visma_blue_inbound_email_explanation">"Verwenden Sie diese E-Mail-Adresse um Ihre digitale Dokumente an die App weiterzuleiten."</string>
+    <string name="visma_blue_about_logged_in_as">"Angemeldet als"</string>
+    <string name="visma_blue_service_title_mamut">"Mamut"</string>
+    <string name="visma_blue_service_title_expense">"Visma Expense"</string>
+    <string name="visma_blue_service_title_accountview">"AccountView"</string>
+    <string name="visma_blue_service_title_spcs">"Visma SPCS"</string>
+    <string name="visma_blue_main_activity_title">"Visma Scanner"</string>
+    <string name="visma_blue_service_title_netvisor">"Netvisor"</string>
+    <string name="visma_blue_spinner_nothing_chosen">"(Leer)"</string>
+    <string name="visma_blue_metadata_more_information_zero_vat_amount">"USt. 0%"</string>
+    <string name="visma_blue_metadata_more_information_zero_vat_amount_netvisor">"USt. 0%"</string>
+    <string name="visma_blue_metadata_more_information_high_vat_amount_netvisor">"USt. 24%"</string>
+    <string name="visma_blue_metadata_more_information_low_vat_amount_netvisor">"USt. 10%"</string>
+    <string name="visma_blue_metadata_more_information_middle_vat_amount_netvisor">"USt. 14%"</string>
+    <string name="visma_blue_service_title_severa">"Severa"</string>
+    <string name="visma_blue_error_missing_permission">"Die App benötigt die angeforderte Berechtigung um richtig zu funktionieren."</string>
+    <string name="visma_blue_error_failed_to_download_custom_data">"Einige Daten wurden nicht heruntergeladen."</string>
+
+    <!-- Severa related strings -->
+    <string name="visma_blue_metadata_incorrect_data_message_date">"Startzeit ist nach der Endzeit"</string>
+    <string name="visma_blue_severa_metadata_case_and_phase">"Fall/Phase"</string>
+    <string name="visma_blue_severa_metadata_select_case">"Projekt wählen"</string>
+    <string name="visma_blue_severa_metadata_phase_activity_title">"Phase wählen"</string>
+    <string name="visma_blue_metadata_expense_type">"Kostenart"</string>
+    <string name="visma_blue_metadata_vat">"USt."</string>
+    <string name="visma_blue_metadata_start_date">"Startdatum"</string>
+    <string name="visma_blue_metadata_end_date">"Enddatum"</string>
+    <string name="visma_blue_metadata_start_time">"Startzeit"</string>
+    <string name="visma_blue_metadata_end_time">"Endzeit"</string>
+    <string name="visma_blue_hint_comment_expense">"Zweck"</string>
+    <string name="visma_blue_email_generate">"E-Mail-Adresse generieren"</string>
+    <string name="visma_blue_preference_automatically_verify_emailed_documents_summary">"Eingehende E-Mails direkt an Ihre ERP-Software senden"</string>
+    <string name="visma_blue_preference_automatically_verify_emailed_documents_title">"Direkt an die ERP-Software senden"</string>
+    <string name="visma_blue_preference_default_automatically_verified_type_title">"Standardtyp"</string>
+
+    <!-- Preferences -->
+    <string name="visma_blue_preference_category_inbound_email">"Eingehende E-Mail-Adresse"</string>
+
+    <!-- Select service -->
+    <string name="visma_blue_integrations_title">"Dienst wählen"</string>
+    <string name="visma_blue_integration_online_title">"Visma Administration"</string>
+    <string name="visma_blue_integration_eaccounting_title">"Visma eAccounting"</string>
+    <string name="visma_blue_integration_mamut_title">"Visma Mamut"</string>
+    <string name="visma_blue_integration_expense_manager_title">"Visma Expense"</string>
+    <string name="visma_blue_integration_account_view_title">"Visma AccountView"</string>
+    <string name="visma_blue_integration_netvisor_title">"Visma Netvisor"</string>
+    <string name="visma_blue_integration_severa_title">"Visma Severa"</string>
+    <string name="visma_blue_integration_online_description">"Fotos Ihrer Belege oder Rechnungen direct an Visma Administration senden."</string>
+    <string name="visma_blue_integration_eaccounting_description">"Fotos von Ihren Belegen oder Rechnungen machen, und direkt an Visma eEkonomi senden."</string>
+    <string name="visma_blue_integration_mamut_description">"Fotos Ihrer Belege oder Rechnungen direkt an Visma Mamut schicken, und zu einer Verifikation zuordnen."</string>
+    <string name="visma_blue_integration_expense_manager_description">"Fotos von Ihren Belegen machen, und an Ihre Reisekostenabrechnung in Visma Expense beifügen."</string>
+    <string name="visma_blue_integration_account_view_description">"Fotos Ihrer Dokumente direkt an Visma AccountView senden, und an neue oder vorhandene Verifikationen beifügen."</string>
+    <string name="visma_blue_integration_netvisor_description">"Visma Scanner aktivieren und Fotos Ihrer Belege schicken, und zu Rechnungen, Reisekostenabrechnungen oder Verifikationen in Netvisor zuordnen."</string>
+    <string name="visma_blue_integration_severa_description">"Fotos von Ihren Belegen machen und zu Reisekostenabrechnungen in Visma Severa zuordnen."</string>
+
+    <!-- Functionality have moved to a new app. Download Visma Scanner and log in to AccountView integration.\n\n After downloaded new app you can delete this app. -->
+    <string name="visma_blue_information_dialog_message_accountview">"Die Funktionalität ist zu einer neuen App übergewechselt. Laden Sie Visma Scanner runter und loggen Sie bei der AccountView-Integration ein. Wenn Sie die neue App heruntergeladen haben, können Sie diese App löschen."</string>
+
+    <!-- Functionality have moved to a new app. Download Visma Scanner and log in to Mamut integration.\n\n After downloaded new app you can delete this app. -->
+    <string name="visma_blue_information_dialog_message_mamut">"Die Funktionalität ist zu einer neuen App übergewechselt. Laden Sie Visma Scanner runter und loggen Sie bei der Mamut-Integration ein. Wenn Sie die neue App heruntergeladen haben, können Sie diese App löschen."</string>
+
+    <!-- Information -->
+    <string name="visma_blue_information_dialog_title">"Information"</string>
+
+    <!-- Go to Google Play -->
+    <string name="visma_blue_information_dialog_go_to_google_play_button_title">"Zu Google Play gehen"</string>
+
+    <!-- "You are currently offline. Your receipt and picture are saved. The next time you are online, these will be sent. -->
+    <string name="visma_blue_upload_photo_fail_message">"Sie haben keinen Internetzugang. Ihr Bild wird später automatisch hochgeladen."</string>
+
+    <!-- Changes saved -->
+    <string name="visma_blue_upload_photo_fail_title">"Information"</string>
+
+    <!-- It's a header text in list which describes photos which failed to upload to backend and received error from backend -->
+    <string name="visma_blue_upload_photo_fail_header_title">"Nicht gesendete Dokumente"</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="visma_blue_preference_default_set_value_summary">"%s"</string>
+
+    <string name="preference_inbound_email_address">"InboundEmailAddress"</string>
+    <string name="preference_automatically_verify_emailed_documents">"AutomaticallyVerifyEmailedDocuments"</string>
+    <string name="preference_type_for_automatically_verified_documents">"TypeForAutomaticallyVerifiedEmailedDocuments"</string>
+
+    <string name="preference_default_email_recipient">"DefaultEmailRecipient"</string>
+
+    <!-- eAccounting preferences -->
+    <string name="preference_use_ready_for_approval">"UseReadyForApproval"</string>
+</resources>

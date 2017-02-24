@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="visma_blue_button_send">"Send"</string>
+    <string name="visma_blue_button_abort">"Avbryt"</string>
+    <string name="visma_blue_invoice">"Faktura"</string>
+    <string name="visma_blue_receipt">"Kvittering"</string>
+    <string name="visma_blue_button_demo">"Prøv appen"</string>
+    <string name="visma_blue_button_remove">"Slett"</string>
+    <string name="visma_blue_button_login">"Logge inn"</string>
+    <string name="visma_blue_menu_logout">"Logge ut"</string>
+
+    <!-- Fuzzy -->
+    <string name="visma_blue_icon_title">"Scanner"</string>
+    <string name="visma_blue_hint_password">"Passord"</string>
+    <string name="visma_blue_hint_email">"E-postadresse"</string>
+    <string name="visma_blue_button_use">"Bruk"</string>
+    <string name="visma_blue_metadata_more_information">"Mer informasjon"</string>
+    <string name="visma_blue_metadata_more_information_name">"Navn"</string>
+    <string name="visma_blue_metadata_more_information_due_amount">"Beløp"</string>
+    <string name="visma_blue_label_image">"Bilde"</string>
+    <string name="visma_blue_label_date">"Dato"</string>
+    <string name="visma_blue_label_type">"Type"</string>
+    <string name="visma_blue_label_photo_is_a_copy">"Bildet er en kopi. Lagre alltid kvittering/faktura som original."</string>
+    <string name="visma_blue_label_photo_is_connected">"Ditt bilde er koblet og du kan derfor ikke gjøre noen endringer."</string>
+    <string name="visma_blue_menu_about">"Om"</string>
+    <string name="visma_blue_label_info2">"Merk at bilder som ikke er koblet  slettes etter 6 måneder. Brukere av tjenesten er ansvarlig for at bilder som sendes via tjenesten ikke bryter med lov eller god etikk."</string>
+    <string name="visma_blue_label_type_receipt">"Kvittering"</string>
+    <string name="visma_blue_label_type_invoice">"Faktura"</string>
+    <string name="visma_blue_email_subject">"E-post fra Visma Scanner"</string>
+    <string name="visma_blue_email_text">"Billede som vedhæftet fil. Sendt fra Visma Scanner"</string>
+    <string name="visma_blue_label_comment">"Kommentar"</string>
+    <string name="visma_blue_error_unknown_error">"Vennligst prøv igjen senere."</string>
+    <string name="visma_blue_error_invalid_user_or_password">"E-post adresse eller passord du har oppgitt er feil."</string>
+    <string name="visma_blue_error_no_access_to_application">"Du har ikke tilgang til tjenesten."</string>
+    <string name="visma_blue_error_no_access_to_application_when_sending">"Du har ikke tilgang til tjenesten Visma Scanner og kan derfor ikke sende bildet til økonomiprogrammet. Ditt bilde lagres i appen."</string>
+    <string name="visma_blue_error_license_agreement_not_accepted">"For å få tilgang til tjenesten må du først godkjenne avtalen for Visma webside."</string>
+    <string name="visma_blue_error_invalid_photo">"Bilde savnes."</string>
+    <string name="visma_blue_error_invalid_state">"Underlaget kan ikke endres."</string>
+    <string name="visma_blue_error_invalid_token">"En feil har oppstått. Forsøk å logge ut og inn igjen."</string>
+    <string name="visma_blue_error_blocked_company">"Din konto er sperret. Vennligst kontakt Visma."</string>
+    <string name="visma_blue_error_blocked_company_when_sending">"Din konto er sperret. Vennligst kontakt Visma. Ditt bilde er lagret i appen."</string>
+    <string name="visma_blue_error_user_is_locked">"Din konto er låst. Vennligst be om nytt passord."</string>
+    <string name="visma_blue_error_empty_password">"Du må oppgi et passord."</string>
+    <string name="visma_blue_error_empty_username">"Du må oppgi en e-postadresse."</string>
+    <string name="visma_blue_error_connection_time_out">"Det går ikke å få kontakt med tjenesten."</string>
+    <string name="visma_blue_error_unknown_error_when_sending">"Kunne ikke sende bildet. Dine bilder lagres i appen og kan sendes senere."</string>
+    <string name="visma_blue_label_not_synced_images">"Ikke sendte bilder"</string>
+    <string name="visma_blue_hint_comment">"Kommentar"</string>
+    <string name="visma_blue_flash_on">"På"</string>
+    <string name="visma_blue_flash_off">"Av"</string>
+    <string name="visma_blue_flash_auto">"Auto"</string>
+
+    <!-- Fuzzy -->
+    <string name="visma_blue_about_licenses">"Tredjepartslisenser"</string>
+    <string name="visma_blue_toast_unsupported_image_format">"Ugyldig bildeformat."</string>
+    <string name="visma_blue_typepicker_title">"Type"</string>
+    <string name="visma_blue_document">"Dokument"</string>
+    <string name="visma_blue_button_read_from_qr">"Skanne QR-kode"</string>
+    <string name="visma_blue_metadata_more_information_total_vat_amount">"Mva-beløp"</string>
+    <string name="visma_blue_metadata_more_information_currency_code">"Valuta"</string>
+    <string name="visma_blue_metadata_more_information_invoice_date">"Fakturadato"</string>
+    <string name="visma_blue_metadata_more_information_due_date">"Forfallsdato"</string>
+    <string name="visma_blue_metadata_more_information_reference_number">"KID/Fakturanummer"</string>
+    <string name="visma_blue_metadata_more_information_organisation_number">"Organisasjonsnummer"</string>
+    <string name="visma_blue_metadata_more_information_high_vat_amount">"Høy mva"</string>
+    <string name="visma_blue_metadata_more_information_middle_vat_amount">"Middel mva"</string>
+    <string name="visma_blue_metadata_more_information_low_vat_amount">"Lav mva"</string>
+    <string name="visma_blue_label_payed">"Betalt"</string>
+    <string name="visma_blue_label_payment_date">"Betalingsdato"</string>
+    <string name="visma_blue_menu_search">"Søk"</string>
+    <string name="visma_blue_error_no_companies">"Det er ingen selskaper knyttet til denne brukeren"</string>
+    <string name="visma_blue_menu_add">"Legg til"</string>
+    <string name="visma_blue_empty_list_create_new_document">"Ta bilde"</string>
+    <string name="visma_blue_empty_list">"Det finnes ingen dokumenter"</string>
+    <string name="visma_blue_toast_read_from_qr">"QR informasjon skannet"</string>
+    <string name="visma_blue_about_version">"Version"</string>
+    <string name="visma_blue_login_tutorial_page_2_title">"Ta bilde"</string>
+    <string name="visma_blue_login_tutorial_page_3_title">"Koble bilde"</string>
+    <string name="visma_blue_login_tutorial_page_1_text">"Send bilder direkte fra mobilen til ditt Visma program."</string>
+    <string name="visma_blue_login_tutorial_page_2_text">"Ta et bilde, komplett med detaljer og trykk send."</string>
+    <string name="visma_blue_login_tutorial_page_3_text">"Nå kan bilder benyttes som grunnlag i ditt Visma program."</string>
+    <string name="visma_blue_login_choose_company">"Velg firma"</string>
+    <string name="visma_blue_login_tutorial_page_1_title">"Visma Scanner"</string>
+    <string name="visma_blue_preference_category_send">"Send"</string>
+    <string name="visma_blue_preference_default_email_address_title">"Standard e-post adresse"</string>
+    <string name="visma_blue_preference_default_email_address_summary">"Standard e-postadresse for å sende bilder til"</string>
+    <string name="visma_blue_menu_settings">"Innstillinger"</string>
+    <string name="visma_blue_no_supporting_app_installed">"Du må installere en ekstern applikasjon for å vise innholdet i denne filen."</string>
+    <string name="visma_blue_about_generate_inbound_email">"Innkommende e-post adresse"</string>
+    <string name="visma_blue_email_dialog_title">"Innkommende e-post adresse"</string>
+    <string name="visma_blue_document_type_unknown">"Ubehandlet"</string>
+    <string name="visma_blue_not_verified_document">"Dette dokumentet har blitt lastet opp til tjenesten. Du må velge type og lagre dokumentet for å holde det. Hvis du ikke ønsker å lagre dokumentet, kan du slette det."</string>
+    <string name="visma_blue_notification_content_text">"Nye dokumenter å håndtere"</string>
+    <string name="visma_blue_inbound_email_explanation">"Bruk denne adressen til å videresende dine elektroniske fakturaer til appen."</string>
+    <string name="visma_blue_about_logged_in_as">"Logget inn"</string>
+    <string name="visma_blue_service_title_mamut">"Mamut"</string>
+    <string name="visma_blue_service_title_expense">"Visma Expense"</string>
+    <string name="visma_blue_service_title_accountview">"AccountView"</string>
+    <string name="visma_blue_service_title_spcs">"Visma SPCS"</string>
+    <string name="visma_blue_main_activity_title">"Visma Scanner"</string>
+    <string name="visma_blue_service_title_netvisor">"Netvisor"</string>
+    <string name="visma_blue_spinner_nothing_chosen">"(Tomt valg)"</string>
+    <string name="visma_blue_metadata_more_information_zero_vat_amount">"Mva 0%"</string>
+    <string name="visma_blue_metadata_more_information_zero_vat_amount_netvisor">"Mva 0%"</string>
+    <string name="visma_blue_metadata_more_information_high_vat_amount_netvisor">"Mva 24%"</string>
+    <string name="visma_blue_metadata_more_information_low_vat_amount_netvisor">"Mva 10%"</string>
+    <string name="visma_blue_metadata_more_information_middle_vat_amount_netvisor">"Mva 14%"</string>
+    <string name="visma_blue_service_title_severa">"Severa"</string>
+    <string name="visma_blue_error_missing_permission">"Appen behøver forespurte rettigheter for å fungere korrekt."</string>
+    <string name="visma_blue_error_failed_to_download_custom_data">"Nedlasting av visse data misslykkes."</string>
+
+    <!-- Severa related strings -->
+    <string name="visma_blue_metadata_incorrect_data_message_date">"Starttid er etter sluttid."</string>
+    <string name="visma_blue_severa_metadata_case_and_phase">"Prosjekt/Fase"</string>
+    <string name="visma_blue_severa_metadata_select_case">"Velg prosjekt"</string>
+    <string name="visma_blue_severa_metadata_phase_activity_title">"Velg fase"</string>
+    <string name="visma_blue_metadata_expense_type">"Utleggstype"</string>
+    <string name="visma_blue_metadata_vat">"Mva"</string>
+    <string name="visma_blue_metadata_start_date">"Startdato"</string>
+    <string name="visma_blue_metadata_end_date">"Sluttdato"</string>
+    <string name="visma_blue_metadata_start_time">"Starttid"</string>
+    <string name="visma_blue_metadata_end_time">"Sluttid"</string>
+    <string name="visma_blue_hint_comment_expense">"Formål"</string>
+    <string name="visma_blue_email_generate">"Generere e-postadresse"</string>
+    <string name="visma_blue_preference_automatically_verify_emailed_documents_summary">"Send innkommende e-post direkte til ditt økonomiprogram"</string>
+    <string name="visma_blue_preference_automatically_verify_emailed_documents_title">"Send direkte til ditt økonomiprogram"</string>
+    <string name="visma_blue_preference_default_automatically_verified_type_title">"Standard type"</string>
+
+    <!-- Preferences -->
+    <string name="visma_blue_preference_category_inbound_email">"Innkommende e-postadresse"</string>
+
+    <!-- Select service -->
+    <string name="visma_blue_integrations_title">"Velg tjeneste"</string>
+    <string name="visma_blue_integration_online_title">"Visma Administration"</string>
+    <string name="visma_blue_integration_eaccounting_title">"Visma eAccounting"</string>
+    <string name="visma_blue_integration_mamut_title">"Visma Mamut"</string>
+    <string name="visma_blue_integration_expense_manager_title">"Visma Expense"</string>
+    <string name="visma_blue_integration_account_view_title">"Visma AccountView"</string>
+    <string name="visma_blue_integration_netvisor_title">"Visma Netvisor"</string>
+    <string name="visma_blue_integration_severa_title">"Visma Severa"</string>
+    <string name="visma_blue_integration_online_description">"Send bilde av dine kvitteringer eller fakturaer direkte til Visma Administrasjon."</string>
+    <string name="visma_blue_integration_eaccounting_description">"Ta bilde av dine kvitteringer eller fakturaer og send de direkte til Visma eAccounting."</string>
+    <string name="visma_blue_integration_mamut_description">"Ta bilde av dine kvitteringer eller fakturaer og send de direkte til Visma Mamut for å koble dem til et bilag."</string>
+    <string name="visma_blue_integration_expense_manager_description">"Ta bilde av dine kvitteringer og koble dem til reiseregninger i Visma Expense."</string>
+    <string name="visma_blue_integration_account_view_description">"Send bilde av dine dokumenter direkte til Visma Accountview og legg til nye eller eksisterende bilag."</string>
+    <string name="visma_blue_integration_netvisor_description">"Aktiver Visma Scanner i Netvisor og send bilde av dine kvitteringer som kan kobles til fakturaer, reiseregninger eller bilag."</string>
+    <string name="visma_blue_integration_severa_description">"Ta bilde av dine kvitteringer og koble dem til reiseregninger i Visma Severa."</string>
+
+    <!-- Functionality have moved to a new app. Download Visma Scanner and log in to AccountView integration.\n\n After downloaded new app you can delete this app. -->
+    <string name="visma_blue_information_dialog_message_accountview">"Funksjonaliteten har blitt flyttet til en ny app. Last ned Visma Scanner og logg inn til AccountView integrasjonen. Når du har lastet ned den nye appen kan du slette denne."</string>
+
+    <!-- Functionality have moved to a new app. Download Visma Scanner and log in to Mamut integration.\n\n After downloaded new app you can delete this app. -->
+    <string name="visma_blue_information_dialog_message_mamut">"Funksjonaliteten har blitt flyttet til en ny app. Last ned Visma Scanner og logg inn til Mamut integrasjonen. Når du har lastet ned den nye appen kan du slette denne."</string>
+
+    <!-- Information -->
+    <string name="visma_blue_information_dialog_title">"Informasjon"</string>
+
+    <!-- Go to Google Play -->
+    <string name="visma_blue_information_dialog_go_to_google_play_button_title">"Gå til Google Play"</string>
+
+    <!-- "You are currently offline. Your receipt and picture are saved. The next time you are online, these will be sent. -->
+    <string name="visma_blue_upload_photo_fail_message">"Du mangler internettilknytning. Ditt bilde vil automatisk bli lastet opp senere."</string>
+
+    <!-- Changes saved -->
+    <string name="visma_blue_upload_photo_fail_title">"Informasjon"</string>
+
+    <!-- It's a header text in list which describes photos which failed to upload to backend and received error from backend -->
+    <string name="visma_blue_upload_photo_fail_header_title">"Ikke opplastede dokumenter"</string>
+</resources>

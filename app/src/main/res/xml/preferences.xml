@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:key="DefaultEmailStuff"
+        android:title="@string/visma_blue_preference_category_send">
+        <EditTextPreference
+            android:defaultValue=""
+            android:inputType="textEmailAddress|textAutoComplete|textAutoCorrect"
+            android:key="@string/preference_default_email_recipient"
+            android:summary="@string/visma_blue_preference_default_email_address_summary"
+            android:title="@string/visma_blue_preference_default_email_address_title"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="InboundEmailStuff"
+        android:title="@string/visma_blue_preference_category_inbound_email">
+
+        <com.visma.blue.settings.InboundEmailSettingDialog
+            android:defaultValue=""
+            android:key="@string/preference_inbound_email_address"
+            android:summary="@string/visma_blue_email_generate"
+            android:title="@string/visma_blue_about_generate_inbound_email"/>
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="@string/preference_automatically_verify_emailed_documents"
+            android:summary="@string/visma_blue_preference_automatically_verify_emailed_documents_summary"
+            android:title="@string/visma_blue_preference_automatically_verify_emailed_documents_title"/>
+
+        <!--
+        android:dependency="@string/preference_automatically_verify_emailed_documents"
+        -->
+        <com.visma.common.ListPreferenceCompat
+            android:defaultValue="0"
+            android:dependency="@string/preference_automatically_verify_emailed_documents"
+            android:entries="@array/types"
+            android:entryValues="@array/type_ids"
+            android:key="@string/preference_type_for_automatically_verified_documents"
+            android:summary="@string/visma_blue_preference_default_set_value_summary"
+            android:title="@string/visma_blue_preference_default_automatically_verified_type_title"/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

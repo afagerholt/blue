@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="com_visma_photoservice_app_id">1310</integer>
+    <string name="com_visma_app_flurry_id_live" translatable="false">Z47ZY9GPTWG2GMZ6SW85</string>
+    <string name="com_visma_app_flurry_id_test" translatable="false">23D336NMK5YF69SCBWZS</string>
+</resources>

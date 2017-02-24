@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.edmodo.cropper.CropImageView
+        android:id="@+id/blue_fragment_crop_cropImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/blue_fragment_crop_buttons_layout"
+        android:layout_gravity="center" />
+
+    <LinearLayout        
+        style="?android:attr/buttonBarStyle"
+        android:id="@+id/blue_fragment_crop_buttons_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:layout_alignParentBottom="true" >
+
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/blue_fragment_button_cancel"
+            android:layout_width="wrap_content"
+            android:minWidth="64dp"
+            android:layout_height="wrap_content"
+            android:text="@string/visma_blue_button_abort"
+            android:textColor="#ffffff"/>
+
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/blue_fragment_button_use"
+            android:layout_width="wrap_content"
+            android:minWidth="64dp"
+            android:layout_height="wrap_content"
+            android:text="@string/visma_blue_button_use"
+            android:textColor="@color/nc_orange" />
+    </LinearLayout>
+
+</RelativeLayout>

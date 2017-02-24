@@ -1,0 +1,56 @@
+
+    <resources>
+        <string-array name="types">
+            <item>@string/visma_blue_label_type_invoice</item> 
+       		<item>@string/visma_blue_label_type_receipt</item>
+        </string-array>
+
+        <!-- The ids in this array must match the ones in the array above. -->
+        <string-array name="type_ids" translatable="false">
+            <item>"0"</item>
+            <item>"1"</item>
+        </string-array>
+
+
+        <string-array name="integration_names">
+            <item>@string/visma_blue_integration_online_title</item>
+            <item>@string/visma_blue_integration_eaccounting_title</item>
+            <item>@string/visma_blue_integration_mamut_title</item>
+            <item>@string/visma_blue_integration_expense_manager_title</item>
+            <item>@string/visma_blue_integration_account_view_title</item>
+            <item>@string/visma_blue_integration_netvisor_title</item>
+            <item>@string/visma_blue_integration_severa_title</item>
+        </string-array>
+
+        <string-array name="integration_descriptions">
+            <item>@string/visma_blue_integration_online_description</item>
+            <item>@string/visma_blue_integration_eaccounting_description</item>
+            <item>@string/visma_blue_integration_mamut_description</item>
+            <item>@string/visma_blue_integration_expense_manager_description</item>
+            <item>@string/visma_blue_integration_account_view_description</item>
+            <item>@string/visma_blue_integration_netvisor_description</item>
+            <item>@string/visma_blue_integration_severa_description</item>
+        </string-array>
+
+        <integer-array name="integrations_icon_idies">
+            <item>@drawable/blue_administration_icon</item>
+            <item>@drawable/blue_eaccounting_icon</item>
+            <item>@drawable/blue_mamut_icon</item>
+            <item>@drawable/blue_expense_icon</item>
+            <item>@drawable/blue_accountview_icon</item>
+            <item>@drawable/blue_netvisor_icon</item>
+            <item>@drawable/blue_severa_icon</item>
+        </integer-array>
+
+        <!-- The ids in this array must match the size and order in other integration arrays  above. -->
+        <integer-array name="integrations_idies">
+            <item>1110</item>
+            <item>1210</item>
+            <item>1310</item>
+            <item>1410</item>
+            <item>1510</item>
+            <item>1710</item>
+            <item>1810</item>
+        </integer-array>
+
+    </resources>

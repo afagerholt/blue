@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.visma.blue.metadata.severa.SeveraMetadataFragmentModelView"/>
+
+        <variable
+            name="metadataViewModel"
+            type="com.visma.blue.metadata.severa.SeveraMetadataFragmentModelView"/>
+    </data>
+
+    <ScrollView
+        android:id="@+id/blue_fragment_metadata_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp">
+
+            <requestFocus/>
+            <!-- Use android:focusableInTouchMode="true" together with requestFocus
+            to prevent the EditText
+            from gaining focus and starting it's animation when the view is created -->
+
+            <com.visma.common.FloatLabelLayout
+                android:id="@+id/layoutComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:floatLabelTextAppearance="@style/TextAppearance.FloatLabel">
+
+                <EditText
+                    android:id="@+id/descriptionTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/visma_blue_hint_comment"
+                    android:imeOptions="actionNext"
+                    android:inputType="textMultiLine|textAutoCorrect|textCapSentences"
+                    android:maxLength="1000"
+                    android:minHeight="61dp"
+                    android:text="@{metadataViewModel.comment}"
+                    app:addTextChangedListener="@{metadataViewModel.commentWatcher}"
+                    app:enabled="@{metadataViewModel.enabled}"/>
+
+            </com.visma.common.FloatLabelLayout>
+
+            <RelativeLayout
+                android:id="@+id/fragment_metadata_layout_image"
+                android:layout_width="fill_parent"
+                android:layout_height="61dp"
+                android:background="@drawable/nc_list_selector_light"
+                android:gravity="center_vertical"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp">
+
+                <TextView
+                    android:id="@+id/fragment_metadata_image_filename_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/visma_blue_label_image"
+                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                <TextView
+                    android:id="@+id/fragment_metadata_image_filename"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fragment_metadata_image_filename_label"
+                    android:ellipsize="marquee"
+                    android:maxLines="1"
+                    android:text="@string/visma_blue_label_image"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:minHeight="61dp"
+                android:orientation="vertical"
+                android:paddingBottom="12dp"
+                android:paddingEnd="3dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="3dp"
+                android:paddingStart="0dp"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:text="@string/visma_blue_severa_metadata_case_and_phase"
+                    android:textColor="@color/nc_blue"
+                    android:textSize="12sp"/>
+
+                <LinearLayout
+                    android:id="@+id/layoutCasesAndPhases"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/nc_list_selector_light"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:paddingTop="4dp"
+                    app:onClickListener="@{metadataViewModel.casePhaseOnClickListener}"
+                    app:updateCasesPhases="@{metadataViewModel.updateCasesPhases}"
+                    app:enabled="@{metadataViewModel.casePhaseEnabled}">
+
+                    <TextView
+                        android:id="@+id/textViewCase"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="4dp"
+                        android:text="@string/visma_blue_spinner_nothing_chosen"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="16sp"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:paddingEnd="3dp"
+                android:paddingLeft="0dp"
+                android:paddingRight="3dp"
+                android:paddingStart="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="4dp"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:text="@string/visma_blue_metadata_expense_type"
+                    android:textColor="@color/nc_blue"
+                    android:textSize="12sp"/>
+
+                <Spinner
+                    android:id="@+id/expenseTypeSpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:adapter="@{metadataViewModel.expenseTypeAdapter}"
+                    app:onItemSelectedListener="@{metadataViewModel.expenseTypeItemSelectedListener}"
+                    app:onTouchListener="@{metadataViewModel.touchListener}"
+                    app:selection="@{metadataViewModel.productSelection}"
+                    app:enabled="@{metadataViewModel.expenseTypeEnabled}"
+                    tools:listitem="@layout/blue_spinner_item"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/remainingInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:visibility="@{metadataViewModel.remainingFieldsVisibility}">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="12dp">
+
+                    <TextView
+                        android:id="@+id/currencyTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="@{metadataViewModel.currency}"
+                        android:textColor="@color/nc_blue"
+                        android:textSize="12sp"/>
+
+                    <EditText
+                        android:id="@+id/amountTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal|numberSigned"
+                        android:maxLines="1"
+                        android:text="@{metadataViewModel.amount}"
+                        android:textSize="16sp"
+                        app:addTextChangedListener="@{metadataViewModel.amountWatcher}"
+                        app:enabled="@{metadataViewModel.enabled}"
+                        app:keyListener="@{metadataViewModel.decimalKeyListener}"
+                        app:onEditorActionListener="@{metadataViewModel.amountEditorActionListener}"
+                        app:onFocusChangeListener="@{metadataViewModel.amountFocusChangeListener}"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutVat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="12dp"
+                    android:paddingEnd="3dp"
+                    android:paddingLeft="0dp"
+                    android:paddingRight="3dp"
+                    android:paddingStart="0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="4dp"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="@string/visma_blue_metadata_vat"
+                        android:textColor="@color/nc_blue"
+                        android:textSize="12sp"/>
+
+                    <Spinner
+                        android:id="@+id/vatSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:adapter="@{metadataViewModel.taxAdapter}"
+                        app:onItemSelectedListener="@{metadataViewModel.taxItemSelectedListener}"
+                        app:onTouchListener="@{metadataViewModel.touchListener}"
+                        app:selection="@{metadataViewModel.taxSelection}"
+                        app:enabled="@{metadataViewModel.taxesEnabled}"
+                        tools:listitem="@layout/blue_spinner_item"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutDatesAndTimes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:baselineAligned="false"
+                    android:orientation="horizontal"
+                    android:paddingBottom="12dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/layoutStartDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/nc_list_selector_light"
+                            android:minHeight="48dp"
+                            android:orientation="vertical"
+                            app:enabled="@{metadataViewModel.enabled}"
+                            app:onClickListener="@{metadataViewModel.startDateOnClickListener}">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="start"
+                                android:paddingBottom="4dp"
+                                android:paddingLeft="3dp"
+                                android:paddingRight="3dp"
+                                android:paddingTop="4dp"
+                                android:text="@string/visma_blue_metadata_start_date"
+                                android:textColor="@color/nc_blue"
+                                android:textSize="12sp"/>
+
+                            <TextView
+                                android:id="@+id/textViewStartDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:duplicateParentState="true"
+                                android:gravity="center_vertical"
+                                android:paddingBottom="6dp"
+                                android:paddingLeft="4dp"
+                                android:paddingRight="4dp"
+                                android:paddingTop="6dp"
+                                android:text="@{metadataViewModel.startDate}"
+                                android:textAppearance="@android:style/TextAppearance.Medium"
+                                android:textSize="16sp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutEndDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/nc_list_selector_light"
+                            android:minHeight="48dp"
+                            android:orientation="vertical"
+                            app:visibility="@{metadataViewModel.timeFieldVisibility}"
+                            app:enabled="@{metadataViewModel.enabled}"
+                            app:onClickListener="@{metadataViewModel.endDateOnClickListener}">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="4dp"
+                                android:paddingLeft="3dp"
+                                android:paddingRight="3dp"
+                                android:paddingTop="4dp"
+                                android:text="@string/visma_blue_metadata_end_date"
+                                android:textColor="@color/nc_blue"
+                                android:textSize="12sp"/>
+
+                            <TextView
+                                android:id="@+id/textViewEndDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:duplicateParentState="true"
+                                android:gravity="center_vertical"
+                                android:paddingBottom="6dp"
+                                android:paddingLeft="4dp"
+                                android:paddingRight="4dp"
+                                android:paddingTop="6dp"
+                                android:text="@{metadataViewModel.endDate}"
+                                android:textAppearance="@android:style/TextAppearance.Medium"
+                                android:textSize="16sp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layoutBothTimes"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:paddingRight="16dp"
+                        app:visibility="@{metadataViewModel.timeFieldVisibility}">
+
+                        <LinearLayout
+                            android:id="@+id/layoutStartTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/nc_list_selector_light"
+                            android:minHeight="48dp"
+                            android:orientation="vertical"
+                            app:enabled="@{metadataViewModel.enabled}"
+                            app:onClickListener="@{metadataViewModel.startTimeOnClickListener}">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:paddingBottom="4dp"
+                                android:paddingLeft="3dp"
+                                android:paddingRight="3dp"
+                                android:paddingTop="4dp"
+                                android:text="@string/visma_blue_metadata_start_time"
+                                android:textColor="@color/nc_blue"
+                                android:textSize="12sp"/>
+
+                            <TextView
+                                android:id="@+id/textViewStartTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:duplicateParentState="true"
+                                android:gravity="end"
+                                android:paddingBottom="6dp"
+                                android:paddingLeft="4dp"
+                                android:paddingRight="4dp"
+                                android:paddingTop="6dp"
+                                android:text="@{metadataViewModel.startTime}"
+                                android:textAppearance="@android:style/TextAppearance.Medium"
+                                android:textSize="16sp"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layoutEndTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/nc_list_selector_light"
+                            android:minHeight="48dp"
+                            android:orientation="vertical"
+                            app:enabled="@{metadataViewModel.enabled}"
+                            app:onClickListener="@{metadataViewModel.endTimeOnClickListener}">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="end"
+                                android:paddingBottom="4dp"
+                                android:paddingLeft="3dp"
+                                android:paddingRight="3dp"
+                                android:paddingTop="4dp"
+                                android:text="@string/visma_blue_metadata_end_time"
+                                android:textColor="@color/nc_blue"
+                                android:textSize="12sp"/>
+
+                            <TextView
+                                android:id="@+id/textViewEndTime"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:duplicateParentState="true"
+                                android:gravity="end"
+                                android:paddingBottom="6dp"
+                                android:paddingLeft="4dp"
+                                android:paddingRight="4dp"
+                                android:paddingTop="6dp"
+                                android:text="@{metadataViewModel.endTime}"
+                                android:textAppearance="@android:style/TextAppearance.Medium"
+                                android:textSize="16sp"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>

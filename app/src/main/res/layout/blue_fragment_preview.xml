@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <com.visma.common.ZoomableImageView
+        android:id="@+id/imageViewPreview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#000000"
+        android:contentDescription="@null"
+        android:scaleType="matrix" />
+
+    <RelativeLayout
+        android:id="@+id/layoutButtons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp" >
+
+        <ImageButton
+            android:id="@+id/buttonUse"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/visma_blue_camera_btn_grey_circle"
+            android:contentDescription="@null"
+            android:padding="40dp"
+            android:src="@drawable/blue_ic_use" >
+        </ImageButton>        
+        
+        <ImageButton
+            android:id="@+id/blue_fragment_preview_crop"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/visma_blue_camera_btn_grey_circle"
+            android:contentDescription="@null"
+            android:padding="40dp"
+            android:src="@drawable/blue_ic_crop" >
+        </ImageButton>        
+
+    </RelativeLayout>
+
+</RelativeLayout>

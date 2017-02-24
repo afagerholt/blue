@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/blue_menu_refresh_server_list"
+        android:icon="@drawable/blue_ic_refresh_white"
+        android:orderInCategory="1"
+        android:title="@string/visma_blue_dev_server_list_menu_refresh"
+        app:showAsAction="ifRoom"/>
+</menu>

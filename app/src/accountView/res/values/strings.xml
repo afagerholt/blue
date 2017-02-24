@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="visma_blue_app_name">"AV Scanner"</string>
+    <string name="visma_blue_label_transferinfo1">"You can send your pictures directly to AccountView."</string>
+    <string name="visma_blue_label_transferinfo2">"If you don't have AccountView, you can send your photos via e-mail."</string>
+    <string name="visma_blue_label_photo_is_a_copy">"The picture is a copy. Always save your original receipt/invoice."</string>
+    <string name="visma_blue_email_subject">"E-mail from AccountView Mobile Scanner"</string>
+    <string name="visma_blue_email_text">"Image as an attachment. Sent from AccountView Mobile Scanner."</string>
+    <string name="visma_blue_label_info1">"With AccountView Mobile Scanner you can send your pictures directly to AccountView."</string>
+    <string name="visma_blue_login_tutorial_page_1_title">"Mobile Scanner"</string>
+    <string name="visma_blue_activity_title_archive">"Mobile Scanner"</string>
+
+</resources>

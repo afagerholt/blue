@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.visma.blue">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <!--
+      Starting in API level 19, this permission is not required to read/write files in your
+      application-specific directories returned by getExternalFilesDir(String) and
+      getExternalCacheDir().
+    -->
+    <!-- But the Images.Media.insertImage(...) method still requires it :-( -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="@xml/bluebackupscheme"
+        android:hardwareAccelerated="true"
+        android:label="@string/visma_blue_icon_title"
+        android:supportsRtl="false"
+        android:theme="@style/NordicCoolMaterialTheme"
+        tools:ignore="UnusedAttribute,GoogleAppIndexingWarning">
+        <activity
+            android:name=".login.LoginActivity"
+            android:label="@string/visma_blue_main_activity_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/NordicCoolMaterialTheme"
+            android:windowSoftInputMode="adjustResize|stateVisible"/>
+        <activity
+            android:name=".login.LoginTutorialActivity"
+            android:label="@string/visma_blue_main_activity_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/NordicCoolMaterialTheme.NoActionBar.GradientBackground"/>
+        <activity
+            android:name=".camera.CameraActivity"
+            android:label="@string/visma_blue_main_activity_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/NordicCoolMaterialTheme.Dark.NoActionBar.FullScreen"/>
+        <activity
+            android:name=".about.AboutActivity"
+            android:label="@string/visma_blue_main_activity_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/NordicCoolMaterialTheme"/>
+        <activity
+            android:name=".settings.SettingsActivity"
+            android:label="@string/visma_blue_main_activity_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/NordicCoolMaterialTheme"/>
+        <activity
+            android:name=".metadata.MetadataActivity"
+            android:label="@string/visma_blue_main_activity_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/NordicCoolMaterialTheme"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".metadata.severa.SeveraCaseActivity"
+            android:label="@string/visma_blue_main_activity_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/NordicCoolMaterialTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".metadata.severa.SeveraPhaseActivity"
+            android:label="@string/visma_blue_main_activity_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/NordicCoolMaterialTheme.NoActionBar"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".metadata.PhotoActivity"
+            android:label="@string/visma_blue_main_activity_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/NordicCoolMaterialTheme.NoActionBar"/>
+        <activity
+            android:name=".qr.QrActivity"
+            android:label="@string/visma_blue_main_activity_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/NordicCoolMaterialTheme.NoActionBar.FullScreen"/>
+        <activity
+            android:name=".login.integrations.IntegrationsActivity"
+            android:label="@string/visma_blue_main_activity_title"
+            android:screenOrientation="portrait"
+            android:theme="@style/NordicCoolMaterialTheme"/>
+        <activity
+            android:name=".metadata.expense.ExpenseTypeActivity"
+            android:label="@string/visma_blue_metadata_expense_type"
+            android:screenOrientation="portrait"
+            android:theme="@style/NordicCoolMaterialTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".metadata.expense.ExpenseCurrencyActivity"
+            android:label="@string/visma_blue_metadata_more_information_currency_code"
+            android:screenOrientation="portrait"
+            android:theme="@style/NordicCoolMaterialTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".login.chooser.ServerListActivity"
+            android:label="@string/visma_blue_dev_server_list_window_header"
+            android:screenOrientation="portrait"
+            android:theme="@style/NordicCoolMaterialTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+        <activity
+            android:name=".TestFragmentActivity"
+            android:exported="false"/>
+
+        <!--
+             FirebaseInstanceIdService performs security checks at runtime,
+                  no need for explicit permissions despite exported="true"
+                  at least according to the firebase documentation at
+                  https://firebase.google.com/docs/reference/android/com/google/firebase/iid/FirebaseInstanceIdService
+        -->
+        <service
+            android:name=".fcm.FcmInstanceIdListenerService"
+            android:exported="true"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name=".fcm.FcmRegistrationIntentService"
+            android:exported="false"/>
+        <service
+            android:name=".fcm.BlueFcmListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+        </service>
+        <service android:name=".settings.SettingsDownloadService"/>
+        <service android:name=".settings.SettingsUploadService"/>
+        <service android:name=".services.CustomDataDownloadService"/>
+        <service android:name=".services.MetadataDownloadService"/>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,201 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+
+    dependencies {
+        //Crashlytics recommend using dynamic version like this
+        //noinspection GradleDynamicVersion
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    dataBinding {
+        enabled = true
+    }
+
+    defaultConfig {
+        applicationId "com.visma.blue"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 23
+        versionName "2.6.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+    }
+
+    //With Android KitKat (buildToolsVersion 19) you can use the diamond operator, multi-catch, strings in switches, try with resources, etc.
+    //Note that you can use minSdkVersion with a value earlier than 19, for all language features except try with resources.
+    // If you want to use try with resources, you will need to also use a minSdkVersion of 19.
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    buildTypes.all { ext.FabricApiSecret = null }
+    buildTypes {
+        debug {
+            // available since 0.10.0 according to
+            //http://tools.android.com/tech-docs/new-build-system
+            testCoverageEnabled true
+            FabricApiSecret = "3d42b0359c0fdc59e599550ea978c15b6831d4993f7a49e6eece1f51a2666343"
+            manifestPlaceholders = [FabricApiKey: "6502ecb5094dee89ec8dba4485e914111f320dbb"]
+        }
+        debuggable.initWith(buildTypes.debug)
+        debuggable {
+            //textCoverageEnabled somehow breaks the local variables in the debugger
+            //http://code.google.com/p/android/issues/detail?id=123771
+            testCoverageEnabled = false
+            FabricApiSecret = "3d42b0359c0fdc59e599550ea978c15b6831d4993f7a49e6eece1f51a2666343"
+            manifestPlaceholders = [FabricApiKey: "6502ecb5094dee89ec8dba4485e914111f320dbb"]
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            FabricApiSecret = "6251d790498452ce69b33a6d5dc78f32959a38ca0fb698d4cfa13daaf1488a8c"
+            manifestPlaceholders = [FabricApiKey: "7d0f4e6361a5ee9299676a882ad4a730f68b69d1"]
+        }
+    }
+
+    productFlavors.all {
+        ext.FabricApiSecretDebug = null
+        ext.FabricApiSecretRelease = null
+    }
+    productFlavors {
+        accountView {
+            applicationId "com.visma.blue.accountview"
+        }
+        expense {
+            applicationId "com.visma.blue.expense"
+            resConfigs "da", "fi", "nb", "nl", "no", "sv", "en"
+        }
+        mamut {
+            applicationId "com.visma.blue.mamut"
+        }
+        spcs {
+            applicationId "com.visma.blue"
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+        disable 'RtlHardcoded' //We will not have support for Rtl
+        disable 'RtlSymmetry'
+    }
+
+    applicationVariants.all { variant ->
+        variant.productFlavors.each { flavor ->
+            if (flavor.name == "spcs" || flavor.name == "expense") {
+                def variantSuffix = variant.name.capitalize()
+                def generateResourcesTask = project.tasks.getByName("fabricGenerateResources${variantSuffix}")
+                def generatePropertiesTask = task("fabricGenerateProperties${variantSuffix}") << {
+                    Properties properties = new Properties()
+                    properties.put("apiSecret", variant.buildType.FabricApiSecret)
+                    properties.store(new FileWriter("${project.projectDir.absolutePath}/fabric.properties"), "")
+                }
+                generateResourcesTask.dependsOn generatePropertiesTask
+            }
+        }
+    }
+
+    testOptions {
+        unitTests.all {
+            // All the usual Gradle options.
+            jvmArgs '-noverify'
+            //maxParallelForks 1
+            //forkEvery 10
+            maxHeapSize = "2g"
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':viewPagerIndicator')
+    compile project(':aars')
+    compile files('libs/zbar.jar')
+    // Okhttp is incorporated into android since 4.4
+    // but we want it in earlier versions as well and more up to date.
+    // To be able to use the old HttpURLConnection API
+    compile 'com.flurry.android:analytics:6.4.0'
+    compile 'com.github.castorflex.smoothprogressbar:library-circular:1.2.0'
+    compile 'com.google.code.gson:gson:2.7'
+    compile 'com.google.android.gms:play-services-base:9.4.0'
+    compile 'com.google.firebase:firebase-messaging:9.4.0'
+    compile 'com.google.android.gms:play-services-vision:9.4.0'
+    compile 'com.google.android.gms:play-services-analytics:9.4.0'
+    compile 'com.android.volley:volley:1.0.0'
+    compile 'com.edmodo:cropper:1.0.1'
+    compile 'com.android.support:support-v4:24.2.1'
+    compile 'com.android.support:support-v13:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.wdullaer:materialdatetimepicker:1.5.3'
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:cardview-v7:24.2.1'
+    compile 'se.emilsjolander:stickylistheaders:2.7.0'
+    compile 'com.squareup.okhttp3:okhttp:3.3.1'
+    compile 'com.squareup.okhttp3:okhttp-urlconnection:3.3.1'
+    compile 'com.squareup.okio:okio:1.8.0'
+    compile 'com.drewnoakes:metadata-extractor:2.8.1'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'com.evernote:android-job:1.0.10'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    //Fabric stuff
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.7@aar') {
+        transitive = true;
+    }
+    compile('com.crashlytics.sdk.android:answers:1.3.8@aar') {
+        transitive = true;
+    }
+    //Multipart post libraries
+    compile 'org.apache.httpcomponents:httpcore:4.4.5'
+    compile ('org.apache.httpcomponents:httpmime:4.3.6') {
+        exclude module: 'httpclient'
+    }
+
+    // Test
+    // Set this dependency if you want to use Hamcrest matching
+    androidTestCompile 'org.hamcrest:hamcrest-library:1.3'
+    androidTestCompile 'com.android.support:support-annotations:24.2.1'
+    androidTestCompile 'com.android.support.test:runner:0.5'
+    //androidTestCompile ('com.android.support.test:runner:0.4.1') {
+    //    exclude module: 'support-annotations'
+    //}
+    androidTestCompile 'com.android.support.test:rules:0.5'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.2'
+    //Sometimes tests fail on older devices because they are more sensitive to different versions in
+    //dependencies. Solution: Use exclude
+    //http://stackoverflow.com/questions/28999124/resolved-versions-for-app-22-0-0-and-test-app-21-0-3-differ
+    testCompile 'org.hamcrest:hamcrest-library:1.3'
+    testCompile 'com.android.support:support-annotations:24.2.1'
+    testCompile 'com.android.support.test:runner:0.5'
+    testCompile 'com.android.support.test:rules:0.5'
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.mockito:mockito-core:1.10.19'
+    // Robolectric
+    testCompile 'org.robolectric:robolectric:3.1.2'
+    testCompile 'org.robolectric:shadows-play-services:3.1.2'
+    testCompile 'org.robolectric:shadows-support-v4:3.1.2'
+    //Web service mock library
+    testCompile 'com.squareup.okhttp3:mockwebserver:3.3.1'
+    //https://github.com/robolectric/robolectric/issues/1932
+    testCompile 'org.khronos:opengl-api:gl1.1-android-2.1_r1'
+    // Add to the bottom of the file
+    apply plugin: 'com.google.gms.google-services'
+
+}
